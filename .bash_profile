@@ -19,4 +19,4 @@ export LSCOLORS="$DIR$SYM_LINK$SOCKET$PIPE$EXE$BLOCK_SP$CHAR_SP$EXE_SUID$EXE_GUI
 PS1='\e[1;31m\u\e[1;34m@\e[1;33m\h \e[1;32m\W > \e[m'
 
 #Alial
-alias ls='ls -G'
+alias ls='ls -Gw'
