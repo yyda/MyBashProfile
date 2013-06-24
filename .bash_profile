@@ -5,9 +5,12 @@ PATH=${PATH}:/usr/local/mysql/bin
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 #Function git
-function parse_git_branch {
-   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
+function parse_git_branch { 
+   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/' 
+} 
+
+
+
 
 # Colors Code
 DIR=bx
@@ -34,6 +37,8 @@ DONLIFE='\342\224\224'
 #PS1='\e[1;31m\u\e[1;34m@\e[1;33m\h \e[1;32m\W > \e[m'
 PS1="\n\[\033[1;34m\]\342\224\214\342\224\200(\[\033[1;33m\]\u\e\[\033[1;97m\]@\[\033[1;31m\]\h\[\033[1;34m\])\[\033[1;34m\]\342\224\200(\[\033[1;36m\]\w\[\033[1;34m\])\[\033[0;33m\]\$(parse_git_branch)\n\[\033[1;34m\]\342\224\224\342\224\200\[\033[1;32m\]$>\e[m"
 
-#Alial
+#Alial 
 alias ls='ls -wG'
 alias la='ls -wGa'
+
+source ~/.git-completion.bash
